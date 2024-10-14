@@ -1,0 +1,135 @@
+<Project>
+	<!-- 
+		These targets address symbolic links creation
+	-->
+	<Target Name="SetupSymbolicLinks"
+			BeforeTargets="BeforeBuild">
+		<PropertyGroup>
+			<EnableSymbolicLinks>true</EnableSymbolicLinks>
+		</PropertyGroup>
+		<PropertyGroup Condition="$(EnableSymbolicLinks) == 'true'">
+			<!-- [CopyFilesToOutputDirectory] Build product (.dll or .exe) -->
+			<!-- [CopyFilesToOutputDirectory] Serialization assembly -->
+			<!-- [CopyFilesToOutputDirectory] Debug information file (.pdb) -->
+			<!-- [CopyFilesToOutputDirectory] XML documentation file -->
+			<!-- [CopyFilesToOutputDirectory] Satellite assemblies -->
+			<!-- [CopyFilesToOutputDirectory] Build product of WinMDExp -->
+			<CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible>true</CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible>
+			<!-- [CopyFilesToOutputDirectory] Additional modules -->
+			<!-- [CopyFilesToOutputDirectory] COM reference wrappers -->
+			<!-- [CopyFilesToOutputDirectory] Isolated COM references -->
+			<!-- [CopyFilesToOutputDirectory] COM references included by native (manifest) references -->
+			<!-- [CopyFilesToOutputDirectory] Native (manifest) reference files -->
+			<CreateSymbolicLinksForCopyAdditionalFilesIfPossible>true</CreateSymbolicLinksForCopyAdditionalFilesIfPossible>
+			<!-- [_CopyFilesMarkedCopyLocal] References that are marked as "CopyLocal" and their dependencies, including .pdbs, .xmls and satellites -->
+			<CreateSymbolicLinksForCopyLocalIfPossible>true</CreateSymbolicLinksForCopyLocalIfPossible>
+			<!-- [_CopyOutOfDateSourceItemsToOutputDirectory] Files that have the CopyToOutputDirectory attribute set to "PreserveNewest" -->
+			<!-- [_CopyOutOfDateSourceItemsToOutputDirectoryAlways] Files that have the CopyToOutputDirectory attribute set to "Always" -->
+			<!-- [_CopyAppConfigFile] Application config file -->
+			<!-- [_CopyManifestFiles] Built manifests (.exe.manifest, .application/.xbap) -->
+			<CreateSymbolicLinksForAdditionalFilesIfPossible>true</CreateSymbolicLinksForAdditionalFilesIfPossible>
+			<!-- [_CopyFilesToPublishFolder] Files copied in published folder -->
+			<CreateSymbolicLinksForPublishFilesIfPossible>true</CreateSymbolicLinksForPublishFilesIfPossible>
+		</PropertyGroup>
+	</Target>
+
+	<Target Name="AvoidSymbolicLinksForConfigFiles"
+			BeforeTargets="_CopyAppConfigFile">
+		<PropertyGroup>
+			<CreateSymbolicLinksForAdditionalFilesIfPossible>false</CreateSymbolicLinksForAdditionalFilesIfPossible>
+		</PropertyGroup>
+	</Target>
+	<Target Name="Rollback_AvoidSymbolicLinksForConfigFiles"
+			AfterTargets="_CopyAppConfigFile"
+			Condition="'$(EnableSymbolicLinks)' == 'true'">
+		<PropertyGroup>
+			<CreateSymbolicLinksForAdditionalFilesIfPossible>true</CreateSymbolicLinksForAdditionalFilesIfPossible>
+		</PropertyGroup>
+	</Target>
+	<Target Name="RestoreSymlinksInsideVisualStudio_FilesToOutputDirectory"
+			BeforeTargets="CopyFilesToOutputDirectory"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(BuildingInsideVisualStudio)' == 'true'">
+		<PropertyGroup>
+			<BuildingInsideVisualStudio>false</BuildingInsideVisualStudio>
+			<WasBuildingInsideVisualStudio>true</WasBuildingInsideVisualStudio>
+		</PropertyGroup>
+	</Target>
+	<Target Name="Rollback_RestoreSymlinksInsideVisualStudio_FilesToOutputDirectory"
+			AfterTargets="CopyFilesToOutputDirectory"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(WasBuildingInsideVisualStudio)' == 'true'">
+		<PropertyGroup>
+			<BuildingInsideVisualStudio>true</BuildingInsideVisualStudio>
+		</PropertyGroup>
+	</Target>
+	<Target Name="RestoreSymlinksInsideVisualStudio_Local"
+			BeforeTargets="_CopyFilesMarkedCopyLocal"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(BuildingInsideVisualStudio)' == 'true'">
+		<PropertyGroup>
+			<BuildingInsideVisualStudio>false</BuildingInsideVisualStudio>
+			<WasBuildingInsideVisualStudio>true</WasBuildingInsideVisualStudio>
+		</PropertyGroup>
+	</Target>
+	<Target Name="Rollback_RestoreSymlinksInsideVisualStudio_Local"
+			AfterTargets="_CopyFilesMarkedCopyLocal"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(WasBuildingInsideVisualStudio)' == 'true'">
+		<PropertyGroup>
+			<BuildingInsideVisualStudio>true</BuildingInsideVisualStudio>
+		</PropertyGroup>
+	</Target>
+	<Target Name="RestoreSymlinksInsideVisualStudio_PublishFiles"
+			BeforeTargets="_CopyFilesToPublishFolder"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(BuildingInsideVisualStudio)' == 'true'">
+		<PropertyGroup>
+			<BuildingInsideVisualStudio>false</BuildingInsideVisualStudio>
+			<WasBuildingInsideVisualStudio>true</WasBuildingInsideVisualStudio>
+		</PropertyGroup>
+	</Target>
+	<Target Name="Rollback_RestoreSymlinksInsideVisualStudio_PublishFiles"
+			AfterTargets="_CopyFilesToPublishFolder"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(WasBuildingInsideVisualStudio)' == 'true'">
+		<PropertyGroup>
+			<BuildingInsideVisualStudio>true</BuildingInsideVisualStudio>
+		</PropertyGroup>
+	</Target>
+	<Target Name="RestoreSymlinksInsideVisualStudio_AdditionalFiles"
+			BeforeTargets="PrepareForRun"
+			Condition="'$(EnableSymbolicLinks)' == 'true'">
+		<PropertyGroup>
+			<CreateSymbolicLinksForCopyAdditionalFilesIfPossible>true</CreateSymbolicLinksForCopyAdditionalFilesIfPossible>
+		</PropertyGroup>
+	</Target>
+	<Target Name="SetDocFileItemAbsolutePath_CopyFilesToOutputDirectory"
+			BeforeTargets="CopyFilesToOutputDirectory"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and Exists('@(DocFileItem)')">
+		<PropertyGroup>
+			<PreviousDocFileItem>@(DocFileItem)</PreviousDocFileItem>
+			<DocFileItemFullPath>@(DocFileItem->'%(FullPath)')</DocFileItemFullPath>
+		</PropertyGroup>
+		<ItemGroup>
+			<DocFileItem Remove="$(PreviousDocFileItem)" />
+			<DocFileItem Include="$(DocFileItemFullPath)" />
+		</ItemGroup>
+	</Target>
+	<Target Name="Rollback_SetDocFileItemAbsolutePath_CopyFilesToOutputDirectory"
+			AfterTargets="CopyFilesToOutputDirectory"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and Exists('@(DocFileItem)')">
+		<ItemGroup>
+			<DocFileItem Remove="@(DocFileItem)" />
+			<DocFileItem Include="$(PreviousDocFileItem)" />
+		</ItemGroup>
+	</Target>
+	<Target Name="BypassCreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible_CopyFilesToOutputDirectory"
+			BeforeTargets="CopyFilesToOutputDirectory"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(TargetExt)' == '.exe'">
+		<PropertyGroup>
+			<CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible>false</CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible>
+		</PropertyGroup>
+	</Target>
+	<Target Name="RestoreCreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible_CopyFilesToOutputDirectory"
+			AfterTargets="CopyFilesToOutputDirectory"
+			Condition="'$(EnableSymbolicLinks)' == 'true' and '$(TargetExt)' == '.exe'">
+		<PropertyGroup>
+			<CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible>true</CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible>
+		</PropertyGroup>
+	</Target>
+</Project>

@@ -1,0 +1,11 @@
+<Project>
+	<PropertyGroup>		
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<OutputPath>bin\</OutputPath>
+		<IntermediateOutputPath>$(MSBuildProjectDirectory)\obj\</IntermediateOutputPath>
+
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+	</PropertyGroup>
+</Project>
