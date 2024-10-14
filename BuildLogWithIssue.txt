@@ -1,0 +1,201 @@
+Build started at 13:49...
+1>FastUpToDate: Build acceleration is enabled for this project via a feature flag. See "Tools | Options | Environment | Preview Features" to control this setting. See https://aka.ms/vs-build-acceleration. (ProjectA)
+1>FastUpToDate: Comparing timestamps of inputs and outputs: (ProjectA)
+1>FastUpToDate:     Adding UpToDateCheckBuilt outputs: (ProjectA)
+1>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll (ProjectA)
+1>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.dll (ProjectA)
+1>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml (ProjectA)
+1>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.xml (ProjectA)
+1>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.pdb (ProjectA)
+1>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb (ProjectA)
+1>FastUpToDate:     Adding Compile inputs: (ProjectA)
+1>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\ClassA.cs (ProjectA)
+1>FastUpToDate: Input Compile item 'E:\FUTDC Symlink repro\src\ProjectA\ClassA.cs' is newer (2024-10-14 13:49:10.461) than earliest output 'E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.xml' (2024-10-14 13:43:37.340), not up-to-date. (ProjectA)
+1>FastUpToDate: Up-to-date check completed in 0,4 ms (ProjectA)
+1>------ Build started: Project: ProjectA, Configuration: Debug Any CPU ------
+1>Build started 14.10.2024 13:49:12.
+1>Target GenerateTargetFrameworkMonikerAttribute:
+1>  Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+1>Target CoreGenerateAssemblyInfo:
+1>  Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+1>Target _GenerateSourceLinkFile:
+1>  Source Link is empty, file 'E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.sourcelink.json' does not exist.
+1>Target CoreCompile:
+1>  CompilerServer: server - server processed compilation - ProjectA (netstandard2.0)
+1>Target GenerateBuildDependencyFile:
+1>  Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+1>Target CopyFilesToOutputDirectory:
+1>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.dll" to "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll".
+1>  ProjectA -> E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll
+1>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.pdb" to "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb".
+1>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\obj\ProjectA.xml" to "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml".
+1>
+1>Build succeeded.
+1>    0 Warning(s)
+1>    0 Error(s)
+1>
+1>Time Elapsed 00:00:00.09
+2>FastUpToDate: Build acceleration is enabled for this project via a feature flag. See "Tools | Options | Environment | Preview Features" to control this setting. See https://aka.ms/vs-build-acceleration. (ProjectB)
+2>FastUpToDate: Comparing timestamps of inputs and outputs: (ProjectB)
+2>FastUpToDate:     Adding UpToDateCheckBuilt outputs: (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.dll (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.dll (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.xml (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.xml (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.pdb (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.pdb (ProjectB)
+2>FastUpToDate:     Adding Compile inputs: (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\ClassB.cs (ProjectB)
+2>FastUpToDate:     Adding ResolvedCompilationReference inputs: (ProjectB)
+2>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\obj\ref\ProjectA.dll (ProjectB)
+2>FastUpToDate:     No inputs are newer than earliest output 'E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.xml' (2024-10-14 13:43:29.349). Newest input is 'E:\FUTDC Symlink repro\src\ProjectA\obj\ref\ProjectA.dll' (2024-10-14 13:43:29.141). (ProjectB)
+2>FastUpToDate: Checking items to copy to the output directory: (ProjectB)
+2>FastUpToDate:     Checking copy items from project 'E:\FUTDC Symlink repro\src\ProjectA\ProjectA.csproj': (ProjectB)
+2>FastUpToDate:         Checking PreserveNewest item (ProjectB)
+2>FastUpToDate:             Source      2024-10-14 13:49:12.142: 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb' (ProjectB)
+2>FastUpToDate:             Destination 2024-10-14 13:43:37.547: 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.pdb' (ProjectB)
+2>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb' to 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.pdb'. (ProjectB)
+2>FastUpToDate:         Checking PreserveNewest item (ProjectB)
+2>FastUpToDate:             Source      2024-10-14 13:49:12.137: 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll' (ProjectB)
+2>FastUpToDate:             Destination 2024-10-14 13:43:37.547: 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.dll' (ProjectB)
+2>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll' to 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.dll'. (ProjectB)
+2>FastUpToDate:         Checking PreserveNewest item (ProjectB)
+2>FastUpToDate:             Source      2024-10-14 13:49:12.143: 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml' (ProjectB)
+2>FastUpToDate:             Destination 2024-10-14 13:43:37.547: 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.xml' (ProjectB)
+2>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml' to 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.xml'. (ProjectB)
+2>FastUpToDate: Copying 3 files to accelerate build (https://aka.ms/vs-build-acceleration): (ProjectB)
+2>FastUpToDate:     From 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb' to 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.pdb'. (ProjectB)
+2>FastUpToDate: Exception copying file, scheduling MSBuild: System.IO.IOException: The process cannot access the file 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.pdb' because it is being used by another process.
+2>   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+2>   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+2>   at Microsoft.VisualStudio.IO.Win32FileSystem.CopyFile(String source, String destination, Boolean overwrite, Boolean clearReadOnly)
+2>   at Microsoft.VisualStudio.ProjectSystem.VS.UpToDate.BuildUpToDateCheck.FileSystemOperationAggregator.TryApplyFileSystemOperations() (ProjectB)
+2>FastUpToDate: Up-to-date check completed in 2,0 ms (ProjectB)
+2>------ Build started: Project: ProjectB, Configuration: Debug Any CPU ------
+2>Build started 14.10.2024 13:49:12.
+2>Target _GetProjectReferenceTargetFrameworkProperties:
+2>Target ResolveProjectReferences:
+2>Target GenerateTargetFrameworkMonikerAttribute:
+2>  Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+2>Target CoreGenerateAssemblyInfo:
+2>  Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+2>Target _GenerateSourceLinkFile:
+2>  Source Link is empty, file 'E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.sourcelink.json' does not exist.
+2>Target CoreCompile:
+2>  Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+2>Target _CopyFilesMarkedCopyLocal:
+2>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll" to "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.dll".
+2>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml" to "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.xml".
+2>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb" to "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectA.pdb".
+2>  Touching "E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.csproj.Up2Date".
+2>Target GetCopyToOutputDirectoryItems:
+2>  Target _GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences:
+2>Target GenerateBuildDependencyFile:
+2>  Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+2>Target CopyFilesToOutputDirectory:
+2>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.dll" to "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.dll".
+2>  ProjectB -> E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.dll
+2>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.pdb" to "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.pdb".
+2>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectB\obj\ProjectB.xml" to "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.xml".
+2>
+2>Build succeeded.
+2>    0 Warning(s)
+2>    0 Error(s)
+2>
+2>Time Elapsed 00:00:00.13
+3>FastUpToDate: Build acceleration is enabled for this project via a feature flag. See "Tools | Options | Environment | Preview Features" to control this setting. See https://aka.ms/vs-build-acceleration. (ProjectC)
+3>FastUpToDate: Comparing timestamps of inputs and outputs: (ProjectC)
+3>FastUpToDate:     Adding UpToDateCheckBuilt outputs: (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectC.dll (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.dll (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectC.xml (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.xml (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.pdb (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectC.pdb (ProjectC)
+3>FastUpToDate:     Adding newest import input: (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\Directory.Build.targets (ProjectC)
+3>FastUpToDate:     Adding Compile inputs: (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectC\ClassC.cs (ProjectC)
+3>FastUpToDate:     Adding ResolvedCompilationReference inputs: (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectB\obj\ref\ProjectB.dll (ProjectC)
+3>FastUpToDate:         E:\FUTDC Symlink repro\src\ProjectA\obj\ref\ProjectA.dll (ProjectC)
+3>FastUpToDate:     No inputs are newer than earliest output 'E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.xml' (2024-10-14 13:43:29.587). Newest input is 'E:\FUTDC Symlink repro\src\ProjectB\obj\ref\ProjectB.dll' (2024-10-14 13:43:29.352). (ProjectC)
+3>FastUpToDate: Checking items to copy to the output directory: (ProjectC)
+3>FastUpToDate:     Checking copy items from project 'E:\FUTDC Symlink repro\src\ProjectB\ProjectB.csproj': (ProjectC)
+3>FastUpToDate:         Checking PreserveNewest item (ProjectC)
+3>FastUpToDate:             Source      2024-10-14 13:49:12.366: 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.xml' (ProjectC)
+3>FastUpToDate:             Destination 2024-10-14 13:43:37.721: 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.xml' (ProjectC)
+3>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.xml' to 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.xml'. (ProjectC)
+3>FastUpToDate:         Checking PreserveNewest item (ProjectC)
+3>FastUpToDate:             Source      2024-10-14 13:49:12.365: 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.pdb' (ProjectC)
+3>FastUpToDate:             Destination 2024-10-14 13:43:37.721: 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.pdb' (ProjectC)
+3>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.pdb' to 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.pdb'. (ProjectC)
+3>FastUpToDate:         Checking PreserveNewest item (ProjectC)
+3>FastUpToDate:             Source      2024-10-14 13:49:12.363: 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.dll' (ProjectC)
+3>FastUpToDate:             Destination 2024-10-14 13:43:37.721: 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.dll' (ProjectC)
+3>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.dll' to 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.dll'. (ProjectC)
+3>FastUpToDate:     Checking copy items from project 'E:\FUTDC Symlink repro\src\ProjectA\ProjectA.csproj': (ProjectC)
+3>FastUpToDate:         Checking PreserveNewest item (ProjectC)
+3>FastUpToDate:             Source      2024-10-14 13:49:12.142: 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb' (ProjectC)
+3>FastUpToDate:             Destination 2024-10-14 13:43:37.721: 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.pdb' (ProjectC)
+3>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb' to 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.pdb'. (ProjectC)
+3>FastUpToDate:         Checking PreserveNewest item (ProjectC)
+3>FastUpToDate:             Source      2024-10-14 13:49:12.137: 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll' (ProjectC)
+3>FastUpToDate:             Destination 2024-10-14 13:43:37.721: 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.dll' (ProjectC)
+3>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll' to 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.dll'. (ProjectC)
+3>FastUpToDate:         Checking PreserveNewest item (ProjectC)
+3>FastUpToDate:             Source      2024-10-14 13:49:12.143: 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml' (ProjectC)
+3>FastUpToDate:             Destination 2024-10-14 13:43:37.721: 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.xml' (ProjectC)
+3>FastUpToDate:             Remembering the need to copy file 'E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml' to 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.xml'. (ProjectC)
+3>FastUpToDate: Copying 6 files to accelerate build (https://aka.ms/vs-build-acceleration): (ProjectC)
+3>FastUpToDate:     From 'E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.xml' to 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.xml'. (ProjectC)
+3>FastUpToDate: Exception copying file, scheduling MSBuild: System.IO.IOException: The process cannot access the file 'E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.xml' because it is being used by another process.
+3>   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+3>   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+3>   at Microsoft.VisualStudio.IO.Win32FileSystem.CopyFile(String source, String destination, Boolean overwrite, Boolean clearReadOnly)
+3>   at Microsoft.VisualStudio.ProjectSystem.VS.UpToDate.BuildUpToDateCheck.FileSystemOperationAggregator.TryApplyFileSystemOperations() (ProjectC)
+3>FastUpToDate: Up-to-date check completed in 1,3 ms (ProjectC)
+3>------ Build started: Project: ProjectC, Configuration: Debug Any CPU ------
+3>Build started 14.10.2024 13:49:12.
+3>Target _GetProjectReferenceTargetFrameworkProperties:
+3>Target ResolveProjectReferences:
+3>Target GenerateTargetFrameworkMonikerAttribute:
+3>  Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+3>Target CoreGenerateAssemblyInfo:
+3>  Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+3>Target _GenerateSourceLinkFile:
+3>  Source Link is empty, file 'E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.sourcelink.json' does not exist.
+3>Target CoreCompile:
+3>  Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+3>Target _CopyFilesMarkedCopyLocal:
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.pdb" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.pdb".
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.dll" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.dll".
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.dll" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.dll".
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.pdb" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.pdb".
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectB\bin\ProjectB.xml" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectB.xml".
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectA\bin\ProjectA.xml" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectA.xml".
+3>  Touching "E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.csproj.Up2Date".
+3>Target GetCopyToOutputDirectoryItems:
+3>  Target _GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences:
+3>Target GenerateBuildDependencyFile:
+3>  Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+3>Target CopyFilesToOutputDirectory:
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.dll" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectC.dll".
+3>  ProjectC -> E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectC.dll
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.pdb" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectC.pdb".
+3>  Creating symbolic link to copy "E:\FUTDC Symlink repro\src\ProjectC\obj\ProjectC.xml" to "E:\FUTDC Symlink repro\src\ProjectC\bin\ProjectC.xml".
+3>
+3>Build succeeded.
+3>    0 Warning(s)
+3>    0 Error(s)
+3>
+3>Time Elapsed 00:00:00.12
+========== Build: 3 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 13:49 and took 00,742 seconds ==========
+Visual Studio accelerated 2 project(s), copying 0 file(s). See https://aka.ms/vs-build-acceleration.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++                 Please consider donating to VSColorOutput                    +++
++++                       https://mike-ward.net/donate/                          +++
++++            (this message can be turned off in the settings panel)            +++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
